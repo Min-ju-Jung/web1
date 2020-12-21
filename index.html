@@ -22,10 +22,10 @@
 <script>
 window.fbAsyncInit = function() {
   FB.init({
-    appId      : '401294921302935',
+    appId      : '411348613319066',
     cookie     : true,                     // Enable cookies to allow the server to access the session.
     xfbml      : true,                     // Parse social plugins on this webpage.
-    version    : 'v9.0'           // Use this Graph API version for this call.
+    version    : 'v9.0'           // Use this Graph API version for this call, 'facebool api chage log'로 검색
   });
 
   var callback = function(response) {
@@ -42,18 +42,7 @@ window.fbAsyncInit = function() {
 
 </head>
 <body>
-  <input type = "button" id = "autBtn" value = "checking..." onclick = "
-      if(this,value === 'Login') {
-        // now logout
-        FB.login(function(res){
-          console.log('login =>', res);
-        });
-      } else {
-        // now login
-        FB.logout(function(res){
-          console.log('logout =>', res);
-        });
-      }" >
+  <input type = "button" id = "authBtn" value = "checking...">
 <div id = "titleboard">
  <h1>환영해요 <a href="index.html">VAC</a></h1>
 <input id = "night_day" type = "button" value = "night" onclick = "nightDayHandler(this)">
