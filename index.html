@@ -42,7 +42,18 @@ window.fbAsyncInit = function() {
 
 </head>
 <body>
-  <input type = "button" id = "authBtn" value = "checking...">
+  <input type="button" id="authBtn" value="checking..." onclick = "
+    if(this.value === 'Login') {
+      // now Logout
+      FB.login(function(res) {
+        console.log('login =>', res);
+      });
+    } else {
+      // now Login
+      FB.logout(function(res) {
+        console.log('logout =>', res);
+      });
+    }">
 <div id = "titleboard">
  <h1>환영해요 <a href="index.html">VAC</a></h1>
 <input id = "night_day" type = "button" value = "night" onclick = "nightDayHandler(this)">
