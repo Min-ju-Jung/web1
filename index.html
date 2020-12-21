@@ -20,6 +20,15 @@
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 <!--facebook sdk 파일 facebook서버로부터 다운을 받아서 우리의 웹페이지로 가져오는 것-->
 <script>
+var checkLoginStatus = function(response) {
+  console.log(response);
+  if(response.status === 'connected') {
+    document.querrySelector('#authBtn').value = 'Logout';
+  } else {
+    document.querrySelector('#authBtn').value = 'Login';
+  }
+}
+
 window.fbAsyncInit = function() {
   FB.init({
     appId      : '411348613319066',
@@ -28,15 +37,7 @@ window.fbAsyncInit = function() {
     version    : 'v9.0'           // Use this Graph API version for this call, 'facebool api chage log'로 검색
   });
 
-  var callback = function(response) {
-    console.log(response);
-    if(response.status === 'connected') {
-      document.querrySelector('#authBtn').value = 'Logout';
-    } else {
-      document.querrySelector('#authBtn').value = 'Login';
-    }
-  }
-  FB.getLoginStatus(callback);
+  FB.getLoginStatus(checkLoginStatus);
 };
 </script>
 
@@ -47,13 +48,16 @@ window.fbAsyncInit = function() {
       // now Logout
       FB.login(function(res) {
         console.log('login =>', res);
+        checkLoginStatus(res);
       });
     } else {
       // now Login
       FB.logout(function(res) {
         console.log('logout =>', res);
+        checkLoginStatus(res);
       });
-    }">
+    }
+    ">
 <div id = "titleboard">
  <h1>환영해요 <a href="index.html">VAC</a></h1>
 <input id = "night_day" type = "button" value = "night" onclick = "nightDayHandler(this)">
