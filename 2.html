@@ -3,6 +3,7 @@
 <head>
   <title>vacwebpage-therapist</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4TYXNT91Q"></script>
 <script>
@@ -12,18 +13,30 @@
 
   gtag('config', 'G-G4TYXNT91Q');
 </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "colors.js"></script>
+
 </head>
 <body>
+  <div  id = "titleboard">
   <h1>환영해요 <a href="index.html">VAC</a></h1>
+  <input id = "night_day" type = "button" value = "night" onclick = "nightDayHandler(this)">
+</div>
+<div id="grid">
   <ol>
     <li><a href="1.html">service</a></li>
     <li><a href="2.html">therapist</a></li>
     <li><a href="3.html">reservation</a></li>
   </ol>
-  <h2>therapist</h2>
-  <p>In VAC, there are many great therapists. They have studied a lot and<br>
-  sometime, they go to another country for worldwide forum to discuss<br>
-  what is art therapy and what to do for making it better.You can see their<br>
-  opinion in this page.</p>
+
+  <div id="article">
+    <h2>therapist</h2>
+    <p>In VAC, there are many great therapists. They have studied a lot and<br>
+      sometime, they go to another country for worldwide forum to discuss<br>
+      what is art therapy and what to do for making it better.You can see their<br>
+      opinion in this page.</p>
+  </div>
+</div>
 </body>
 </html>

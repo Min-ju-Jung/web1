@@ -3,6 +3,7 @@
 <head>
   <title>vacwebpage-reservation</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4TYXNT91Q"></script>
 <script>
@@ -13,16 +14,27 @@
   gtag('config', 'G-G4TYXNT91Q');
 </script>
 </head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "colors.js"></script>
+
 <body>
+  <div id = "titleboard">
   <h1>환영해요 <a href="index.html">VAC</a></h1>
+  <input id = "night_day" type = "button" value = "night" onclick = "nightDayHandler(this)">
+</div>
+<div id="grid">
   <ol>
     <li><a href="1.html">service</a></li>
     <li><a href="2.html">therapist</a></li>
     <li><a href="3.html">reservation</a></li>
   </ol>
+ <div id="article">
   <h2>reservation</h2>
   <p>You can email us following this form. Please answer these question.<br>
   As much as you write, we can make reservation for you easily. Just write<br>
   your name, number, schedule and other things. thank you!</p>
+ </div>
+</div>
 </body>
 </html>
