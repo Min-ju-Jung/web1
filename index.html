@@ -41,7 +41,9 @@ window.fbAsyncInit = function() {
 };
 </script>
  
-<script>
+</head>
+<body>
+  <script>
    var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
    var express = require('express');
    var app = express();
@@ -49,8 +51,8 @@ window.fbAsyncInit = function() {
    app.use(passport.initialize());
   
   passport.use(new GoogleStrategy({
-    clientID: 775614663446-ne6987ovuau2g1ib2sf3mhlb3hpfjr2l.apps.googleusercontent.com,
-    clientSecret: GFFUFLpDiHoGZZ93EnX07aq4,
+    clientID: "775614663446-ne6987ovuau2g1ib2sf3mhlb3hpfjr2l.apps.googleusercontent.com",
+    clientSecret: "GFFUFLpDiHoGZZ93EnX07aq4",
     callbackURL: "http://manjuria.ga/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {
@@ -63,8 +65,7 @@ window.fbAsyncInit = function() {
   app.get('/auth/google',
   passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] }));
 </script>
-</head>
-<body>
+  
   <a href="/auth/google">Login with Google</a>
   <input type="button" id="authBtn" value="checking..." onclick = "
     if(this.value === 'Login') {
