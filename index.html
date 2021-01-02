@@ -60,11 +60,11 @@ window.fbAsyncInit = function() {
   }
 ));
   
-  app.get('/auth/google',
+  app.get('/auth/google/callback',
   passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] }));
 </script>
   
-  <a href="/auth/google">Login with Google</a>
+  <a href="/auth/google/callback">Login with Google</a>
   <input type="button" id="authBtn" value="checking..." onclick = "
     if(this.value === 'Login') {
       // now Logout
