@@ -47,8 +47,6 @@ window.fbAsyncInit = function() {
    var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
    var express = require('express');
    var app = express();
-   
-   app.use(passport.initialize());
   
   passport.use(new GoogleStrategy({
     clientID: "775614663446-ne6987ovuau2g1ib2sf3mhlb3hpfjr2l.apps.googleusercontent.com",
