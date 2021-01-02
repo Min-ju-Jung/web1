@@ -44,11 +44,10 @@ window.fbAsyncInit = function() {
 </head>
 <body>
   <script>
-   var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
    var express = require('express');
    var app = express();
-   var passport = require('passport')
-    , LocalStrategy = require('passport-local').Strategy;
+   var passport = require('passport');
+   var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
     
     app.use(passport.initialize());
   
